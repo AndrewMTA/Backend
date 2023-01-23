@@ -3,8 +3,8 @@ const path = require('path')
 const express = require('express');
 const app = express();
 const formRoutes = require('./routes/formRoute')
+const InvestRoutes = require('./routes/investorRoute')
 
-const Form = require('./model/Form');
 const cors = require('cors');
 const mongoose = require("mongoose");
 
@@ -17,6 +17,10 @@ app.use(cors());
 
 app.use('/crowdfunding', formRoutes)
 const server = require('http').createServer(app);
+
+
+
+app.use('/investors', InvestRoutes)
 
 
 mongoose.set('strictQuery', false);
