@@ -15,12 +15,12 @@ app.use(cors());
 
 
 
-app.use('/crowdfunding', formRoutes)
+app.use('/crowdfunding', formRoutes);
 const server = require('http').createServer(app);
 
 
 
-app.use('/investors', InvestRoutes)
+app.use('/investors', InvestRoutes);
 
 
 mongoose.set('strictQuery', false);

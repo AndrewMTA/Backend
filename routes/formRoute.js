@@ -15,6 +15,7 @@ router.get('/:id', async(req, res)=> {
 
 
 router.post('/', async(req, res)=> {
+  console.log("111111111111111111111111");
   try {
     const {
       name,
